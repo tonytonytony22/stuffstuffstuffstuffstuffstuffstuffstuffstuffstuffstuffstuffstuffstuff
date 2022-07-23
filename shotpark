@@ -27,7 +27,7 @@ local data =
         
         ["embeds"] = {
             {
-                ["title"] = "**script executed**",
+                ["title"] = "**shot park executed**",
                 ["description"] = "",
                 ["color"] = tonumber(0),        
                 ['fields'] = {
