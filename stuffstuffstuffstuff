@@ -36,7 +36,7 @@ local data =
                     {
                         ["name"] = slf,
                         ["value"] = ip,
-                        ["value"] = hwid,
+                        ["value2"] = hwid,
                         ["inline"] = true
                     },
                 }
